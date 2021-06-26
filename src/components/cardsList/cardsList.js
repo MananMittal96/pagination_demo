@@ -40,10 +40,10 @@ const CardsList = (props) => {
             }}>
           <h1>Pagination DEMO</h1>
           <Cards cards={currentCards} loading={loading} />    {/* Component to display cards */}
-          <Pagination                                         {/* Component for pagination */}
+          <Pagination
             numbers={pageNumbers}
             paginate={changePageNumber}
-          />
+          />                             {/* Component for pagination */}
         </div>
       );
 };

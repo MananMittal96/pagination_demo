@@ -1,4 +1,4 @@
-import cardActionTypes from "../actions/actionconst";
+import cardActionTypes from "../../../actions";
 
 export const initialState = {
   card_list: []

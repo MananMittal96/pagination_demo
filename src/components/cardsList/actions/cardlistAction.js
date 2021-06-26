@@ -1,5 +1,5 @@
 import axios from "axios";
-import cardActionTypes from './actionconst';
+import cardActionTypes from '../../../actions/index';
 
 const fetchRecentPosts = async () => {
   const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -7,12 +7,10 @@ const fetchRecentPosts = async () => {
 }
 
 export const getCardList = () => {
-  console.log("API")
   return async (dispatch) => {
     try {
       const response = await fetchRecentPosts();
       if(response.length){
-        console.log(response , "action")
               dispatch(setRecentPosts(response))
       }
 } catch (error) {
